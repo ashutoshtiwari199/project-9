@@ -10,6 +10,8 @@
 <body>
     <!-- Header Starts -->
     <header>
+        <i class="fa-solid fa-bars menu"></i>
+        <i class="fa-solid fa-xmark cross hide"></i>
         <!-- Navigation Bar Starts -->
         <nav>
             <!-- Navigation items Starts -->
@@ -111,7 +113,7 @@
                 <div class="blog-bottom">
                     <img class="blog-card-bottom-image" src="./images/IMAGE HERE (2).png" alt="">
                 </div>
-                <div class="blog-author">
+                <div class="blog-authr">
                     <b class="blog-author">Bobby Wagner</b>
                 </div>
                 
@@ -131,7 +133,7 @@
                 <div class="blog-bottom">
                     <img class="blog-card-bottom-image" src="./images/IMAGE HERE (2).png" alt="">
                 </div>
-                <div class="blog-author">
+                <div class="">
                     <b class="blog-author">Gloria Graham</b>
                 </div>
                 
@@ -192,5 +194,23 @@
             </div>
             
         </div>
+
+        <script>
+            let cross = document.querySelector('.cross')
+    let navigation = document.querySelector('.nav-show')
+    let burgerMenu = document.querySelector('.menu')
+    cross.addEventListener('click',()=>{
+        cross.classList.add('hide')
+        navigation.classList.remove('show')
+    })
+
+    burgerMenu.addEventListener('click',()=>{
+        navigation.classList.add('show')
+        burgerMenu.classList.add('.hide')
+        cross.classList.remove('hide')
+    })
+
+</script>
+
 </body>
 </html>
